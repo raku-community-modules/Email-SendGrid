@@ -1,3 +1,70 @@
+=begin pod
+
+=head1 NAME
+
+Email::SendGrid - Basic email sending via the SendGrid API
+
+=head1 DESCRIPTION
+
+A basic Raku module for sending email using the
+L<SendGrid Web API (v3)|https://sendgrid.com/docs/API_Reference/api_v3.html>.
+
+At the time of writing, SendGrid allows sending up to 100 emails a
+day free of charge.  This module most certainly does not provide full
+coverage of the SendGrid API; if you need more, pull requests are
+welcome.
+
+=head1 Usage
+
+Construct an `Eamil::SendGrid` object using your SendGrid API key:
+
+=begin code :lang<raku>
+
+my $sendgrid = Email::SendGrid.new(api-key => 'your_key_here');
+
+=end code
+
+Then call `send-mail` to send email:
+
+=begin code :lang<raku>
+
+$sendgrid.send-mail:
+  from => address('some@address.com', 'Sender name'),
+  to => address('target@address.com', 'Recipient name'),
+  subject => 'Yay, SendGrid works!',
+  content => {
+    'text/plain' => 'This is the plain text message',
+    'text/html' => '<strong>HTML mail!</strong>'
+  };
+
+=end code
+
+It is not required to including a HTML version of the body. Optionally,
+pass C<cc>, C<bcc>, and C<reply-to> to send these addresses. It is also
+possible to pass a list of up to 1000 addresses to C<to>, C<cc>, and
+C<bcc>. 
+
+If sending the mail fails, an exception will be thrown. Since
+C<Cro::HTTP::Client> is used internally, it will be an exception from
+that.
+
+=begin code :lang<raku>
+
+CATCH {
+    default {
+        note await .response.body;
+    }
+}
+
+=end code 
+
+Pass C<:async> to C<send-mail> to get a C<Promise> back instead.
+Otherwise, it will be <await>ed for you by C<send-mail>.
+
+=head1 Class / Methods reference
+
+=end pod
+
 use Cro::HTTP::Client;
 use Cro::Uri;
 
@@ -97,3 +164,19 @@ class Email::SendGrid {
         return @formed;
     }
 }
+
+=begin pod
+
+=head1 AUTHOR
+
+Jonathan Worthington
+
+=head1 COPYRIGHT AND LICENSE
+
+Copyright 2020 - 2024 Jonathan Worthington
+
+Copyright 2024 Raku Community
+
+This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
+
+=end pod

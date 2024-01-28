@@ -1,20 +1,24 @@
 {
-  "name": "Email::SendGrid",
-  "description": "Basic email sending via the SendGrid API.",
-  "version": "0.1",
-  "perl": "6.*",
-  "auth": "Jonathan Worthington <jonathan@edument.cz>",
+  "auth": "zef:raku-community-modules",
+  "build-depends": [
+  ],
   "depends": [
     "Cro::HTTP"
   ],
-  "build-depends": [],
+  "description": "Basic email sending via the SendGrid API",
+  "license": "Artistic-2.0",
+  "name": "Email::SendGrid",
+  "perl": "6.*",
+  "provides": {
+    "Email::SendGrid": "lib/Email/SendGrid.rakumod"
+  },
+  "resources": [
+  ],
+  "source-url": "https://github.com/zef:raku-community-modules/Email-SendGrid.git",
+  "tags": [
+  ],
   "test-depends": [
     "Test::Mock"
   ],
-  "provides": {
-    "Email::SendGrid": "lib/Email/SendGrid.pm6"
-  },
-  "resources": [],
-  "license": "Artistic-2.0",
-  "source-url": "https://github.com/jnthn/raku-email-sendgrid.git"
+  "version": "0.1"
 }
