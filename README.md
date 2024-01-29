@@ -1,4 +1,4 @@
-[![Actions Status](https://github.com/lizmat/Email-SendGrid/actions/workflows/test.yml/badge.svg)](https://github.com/lizmat/Email-SendGrid/actions)
+[![Actions Status](https://github.com/lizmat/Email-SendGrid/actions/workflows/linux.yml/badge.svg)](https://github.com/lizmat/Email-SendGrid/actions) [![Actions Status](https://github.com/lizmat/Email-SendGrid/actions/workflows/macos.yml/badge.svg)](https://github.com/lizmat/Email-SendGrid/actions) [![Actions Status](https://github.com/lizmat/Email-SendGrid/actions/workflows/windows.yml/badge.svg)](https://github.com/lizmat/Email-SendGrid/actions)
 
 NAME
 ====
