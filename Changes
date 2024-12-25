@@ -1,4 +1,6 @@
 Revision history for Email-SendGrid
 
 {{$NEXT}}
-    - Initial version
+
+0.2  2024-12-25T12:02:21+01:00
+    - Initial version as a Raku Community module

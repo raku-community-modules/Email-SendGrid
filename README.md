@@ -1,4 +1,4 @@
-[![Actions Status](https://github.com/lizmat/Email-SendGrid/actions/workflows/linux.yml/badge.svg)](https://github.com/lizmat/Email-SendGrid/actions) [![Actions Status](https://github.com/lizmat/Email-SendGrid/actions/workflows/macos.yml/badge.svg)](https://github.com/lizmat/Email-SendGrid/actions) [![Actions Status](https://github.com/lizmat/Email-SendGrid/actions/workflows/windows.yml/badge.svg)](https://github.com/lizmat/Email-SendGrid/actions)
+[![Actions Status](https://github.com/raku-community-modules/Email-SendGrid/actions/workflows/linux.yml/badge.svg)](https://github.com/raku-community-modules/Email-SendGrid/actions) [![Actions Status](https://github.com/raku-community-modules/Email-SendGrid/actions/workflows/macos.yml/badge.svg)](https://github.com/raku-community-modules/Email-SendGrid/actions) [![Actions Status](https://github.com/raku-community-modules/Email-SendGrid/actions/workflows/windows.yml/badge.svg)](https://github.com/raku-community-modules/Email-SendGrid/actions)
 
 NAME
 ====
@@ -8,7 +8,7 @@ Email::SendGrid - Basic email sending via the SendGrid API
 DESCRIPTION
 ===========
 
-A basic Raku module for sending email using the [SendGrid Web API (v3)](https://sendgrid.com/docs/API_Reference/api_v3.html).
+A basic Raku module for sending email using the [SendGrid Web API (v3)](https://www.twilio.com/docs/sendgrid/for-developers/sending-email/api-getting-started).
 
 At the time of writing, SendGrid allows sending up to 100 emails a day free of charge. This module most certainly does not provide full coverage of the SendGrid API; if you need more, pull requests are welcome.
 
@@ -128,7 +128,7 @@ Jonathan Worthington
 COPYRIGHT AND LICENSE
 =====================
 
-Copyright 2020 - 2024 Jonathan Worthington
+Copyright 2020 Jonathan Worthington
 
 Copyright 2024 Raku Community
 

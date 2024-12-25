@@ -14,11 +14,11 @@
   },
   "resources": [
   ],
-  "source-url": "https://github.com/zef:raku-community-modules/Email-SendGrid.git",
+  "source-url": "https://github.com/raku-community-modules/Email-SendGrid.git",
   "tags": [
   ],
   "test-depends": [
     "Test::Mock"
   ],
-  "version": "0.1"
+  "version": "0.2"
 }

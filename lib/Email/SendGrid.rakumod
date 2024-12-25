@@ -7,7 +7,7 @@ Email::SendGrid - Basic email sending via the SendGrid API
 =head1 DESCRIPTION
 
 A basic Raku module for sending email using the
-L<SendGrid Web API (v3)|https://sendgrid.com/docs/API_Reference/api_v3.html>.
+L<SendGrid Web API (v3)|https://www.twilio.com/docs/sendgrid/for-developers/sending-email/api-getting-started>.
 
 At the time of writing, SendGrid allows sending up to 100 emails a
 day free of charge.  This module most certainly does not provide full
@@ -139,7 +139,7 @@ class Email::SendGrid {
                 auth => { bearer => $!api-key },
                 content-type => 'application/json',
                 body => %request-json;
-        return $async ?? $req !! await($req);
+        $async ?? $req !! await($req)
     }
 
     multi sub to-email-list(Address $addr) {
@@ -161,7 +161,7 @@ class Email::SendGrid {
         for %content {
             @formed.push: %(type => .key, value => .value);
         }
-        return @formed;
+        @formed
     }
 }
 
@@ -173,7 +173,7 @@ Jonathan Worthington
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2020 - 2024 Jonathan Worthington
+Copyright 2020 Jonathan Worthington
 
 Copyright 2024 Raku Community
 
